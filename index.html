@@ -36,10 +36,12 @@
 				<p class="comments">渐渐的..</p>
 				<p class="comments">当你我头发都白了...</p>
 				<p class="comments">我们就坐在公园的摇椅上数叨着我们的回忆...</p>
-				<p class="comments">“你好,是陈敏吧？”</p>
-				<p class="comments">“...”</p>
 			</div>
+			<div class="photo">
+					<img src="http://img1.ph.126.net/y_FtdgG1nVmXpf7EpSOvew==/6631519664981080567.jpg" alt="">
+				</div>
 			<div id="loveHeart">
+				<img src="http://img1.ph.126.net/tlASrMwprNp2PmiGI3pnsg==/6631885802350029604.jpg" class="img" alt="">
 				<canvas id="garden"></canvas>
 				<div id="words">
 					<div id="messages">
@@ -83,7 +85,10 @@
 			setTimeout(function () {
 				adjustWordsPosition();
 				startHeartAnimation();
-			}, 5000);
+				setTimeout(function(){
+					$('.img').fadeIn(1000);	
+				},6000);
+			}, 4000);
 
 			timeElapse(together, displayMode);
 			setInterval(function () {
