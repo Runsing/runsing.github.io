@@ -21,8 +21,8 @@ body{margin:0;padding:0;background:#ffe;font-size:12px;}
 	margin-left:-65px;
 	border-radius: 65px;
 	opacity: .3;
-    -webkit-transform:scale(5);
-	transform:scale(5);
+    -webkit-transform:scale(2.5);
+	transform:scale(2.5);
 }
 img{display: block;}
 .photo{
@@ -40,7 +40,7 @@ img{display: block;}
 	right: 0;
 	top: 0;
 	bottom: 0;
-	width: 200px;
+	max-width: 70%;
 	overflow: hidden;
 	height: 100%;
 	text-align: right;
