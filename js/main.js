@@ -115,7 +115,7 @@ var offsetY = $("#loveHeart").height() / 2 - 55;
 		},
 
 		getAll: function(callback){
-			this.postsRef.once("value", function(snapshot) {
+			this.postsRef.orderByKey().once("value", function(snapshot) {
 			  	var ret = snapshot.val()
 			  	var list = [];
 			  	Object.keys(ret).forEach(function(key){
