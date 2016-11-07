@@ -10,17 +10,12 @@ $(function () {
 	var offsetY = $loveHeart.height() / 2 - 55;
     $garden = $("#garden");
     gardenCanvas = $garden[0];
-	gardenCanvas.width = $("#loveHeart").width();
-    gardenCanvas.height = $("#loveHeart").height()
+	gardenCanvas.width = 670;
+    gardenCanvas.height = 625
     gardenCtx = gardenCanvas.getContext("2d");
     gardenCtx.globalCompositeOperation = "lighter";
     garden = new Garden(gardenCtx, gardenCanvas);
 	
-	$("#content").css("width", $loveHeart.width() + $("#code").width());
-	$("#content").css("height", Math.max($loveHeart.height(), $("#code").height()));
-	$("#content").css("margin-top", Math.max(($window.height() - $("#content").height()) / 2, 10));
-	$("#content").css("margin-left", Math.max(($window.width() - $("#content").width()) / 2, 10));
-
     // renderLoop
     setInterval(function () {
         garden.render();
@@ -39,7 +34,7 @@ function getHeartPoint(angle) {
 	var t = angle / Math.PI;
 	var x = 19.5 * (16 * Math.pow(Math.sin(t), 3));
 	var y = - 20 * (13 * Math.cos(t) - 5 * Math.cos(2 * t) - 2 * Math.cos(3 * t) - Math.cos(4 * t));
-	return new Array(offsetX + x, offsetY + y);
+	return new Array(335 + x, 257.5 + y);
 }
 
 function startHeartAnimation() {
@@ -164,12 +159,12 @@ function showMessages() {
 
 function adjustWordsPosition() {
 	$('#words').css("position", "absolute");
-	$('#words').css("top", $("#garden").position().top + 195);
-	$('#words').css("left", $("#garden").position().left + 70);
+	$('#words').css("top", $("#garden").position().top + 87);
+	$('#words').css("left", $("#garden").position().left + 25);
+	$('#words').css("right", 35);
 }
 
 function adjustCodePosition() {
-	$('#code').css("margin-top", ($("#garden").height() - $("#code").height()) / 2);
 }
 
 function showLoveU() {

@@ -1,6 +1,9 @@
 <!DOCTYPE HTML>
 <html>
 <head>
+	<meta content="width=device-width,minimum-scale=1.0,maximum-scale=1.0" name="viewport">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black">
 	<title>我们的故事</title>
 	<meta charset="utf-8" />
 	<style type="text/css">
@@ -10,17 +13,21 @@
 		}
 	</style>
 	<link href="css/default.css" type="text/css" rel="stylesheet">
-	<script type="text/javascript" src="js/jquery.js"></script>
-	<script type="text/javascript" src="js/garden_dev.js"></script>
-    <script type="text/javascript" src="js/functions_dev.js"></script>
 </head>
 
 <body>
+
+	<div class="input-box">
+		<input type="text" id="msg-text" name=""><span id="msg-btn">发送</span>
+	</div>
+
+	<div class="msg">
+		<ul class="msg-list">
+		</ul>
+	</div>
 	<div id="mainDiv">
 		<div id="content">
 			<div id="code">
-				<p class="comments">“你好,是陈敏吧？”</p>
-				<p class="comments">“...”</p>
 				<p class="comments">2016年01月15日我们彼此相识</p>
 				<p class="comments">第一次神奇的在安华桥相遇</p>
 				<p class="comments">聚少离多的日子里</p>
@@ -56,48 +63,10 @@
 			</div>
 		</div>
 	</div>
-	<script type="text/javascript">
-		var offsetX = $("#loveHeart").width() / 2;
-		var offsetY = $("#loveHeart").height() / 2 - 55;
-		var displayMode = -1;
-		var together = new Date();
-		together.setFullYear(2016, 1, 15);
-		together.setHours(15);
-		together.setMinutes(0);
-		together.setSeconds(0);
-		together.setMilliseconds(0);
-		
-		$("#loveHeart").click(function(){
-			displayMode *= -1;
-			timeElapse(together, displayMode);
-		});
-		
-		if (!document.createElement('canvas').getContext) {
-			var msg = document.createElement("div");
-			msg.id = "errorMsg";
-			msg.innerHTML = "Your browser doesn't support HTML5!<br/>Recommend use Chrome 14+/IE 9+/Firefox 7+/Safari 4+"; 
-			document.body.appendChild(msg);
-			$("#code").css("display", "none")
-			$("#copyright").css("position", "absolute");
-			$("#copyright").css("bottom", "10px");
-		    document.execCommand("stop");
-		} else {
-			setTimeout(function () {
-				adjustWordsPosition();
-				startHeartAnimation();
-				setTimeout(function(){
-					$('.img').fadeIn(1000);	
-				},6000);
-			}, 4000);
-
-			timeElapse(together, displayMode);
-			setInterval(function () {
-				timeElapse(together, displayMode);
-			}, 500);
-
-			adjustCodePosition();
-			$("#code").typewriter();
-		}
-	</script>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/garden_dev.js"></script>
+    <script type="text/javascript" src="js/functions_dev.js"></script>
+	<script src="https://cdn.wilddog.com/sdk/js/2.1.2/wilddog-sync.js"></script>
+	<script src="js/main.js"></script>
 </body>
 </html>
