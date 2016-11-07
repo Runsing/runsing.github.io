@@ -30,8 +30,8 @@ img{display: block;}
 	width:130px;
 	border:6px solid #fff;
 	box-shadow: 2px 2px 6px #aaa;
-	top:10px;
-	right:0px;
+	top:30px;
+	right:20px;
 	-webkit-transform:rotate(30deg);
 	transform:rotate(30deg);
 }
