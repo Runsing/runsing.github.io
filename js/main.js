@@ -43,7 +43,7 @@ var offsetY = $("#loveHeart").height() / 2 - 55;
 	play: function(){
 		var displayMode = -1;
 		var together = new Date();
-		together.setFullYear(2016, 1, 15);
+		together.setFullYear(meet.year, meet.month, meet.date);
 		together.setHours(15);
 		together.setMinutes(0);
 		together.setSeconds(0);
