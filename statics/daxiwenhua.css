@@ -1,0 +1,12 @@
+html,body{
+    background: transparent;
+    color: red;
+}
+.content{
+    line-height: 2em;
+}
+.content img{
+    float: left;
+    width: 300px;
+    margin: 10px;
+}
